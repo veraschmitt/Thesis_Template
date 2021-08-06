@@ -1,0 +1,199 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc} %US-ASCII-Codierung für westeuropäische Sprachen
+\usepackage[a4paper,width=150mm,top=35mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage[utf8]{inputenc} %choose utf8 encoding
+%\usepackage{lmodern}
+%\usepackage{times} %here we use times new roman
+\usepackage[english]{babel}
+
+%Algorithms
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\algorithmicoutput{\textbf{Output:}}
+\algnewcommand\Input{\item[\algorithmicinput]}%
+\algnewcommand\Output{\item[\algorithmicoutput]}%
+\usepackage{transparent} %transparence in color
+%indent within algorithmic
+\usepackage[table, dvipsnames]{xcolor}
+\usepackage[autostyle]{csquotes} %Für Anführungszeichen
+\usepackage{enumitem} %für Listen in Latex
+\usepackage{graphicx} %für Graphiken
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{amsmath} %Mathematische Formeln
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{url} %für URLs
+\usepackage{breakurl} %damit URLs "gebrochen" werden können
+\usepackage[breaklinks, hidelinks]{hyperref}
+%make hidelinks applicabale
+
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{listings} % to insert code
+\usepackage{multirow} % merge cells
+\usepackage{siunitx} % for \num{1e-10}
+\usepackage{subcaption} % for side by side pictures
+\usepackage{setspace}
+%\usepackage[paper=a4paper,left=40mm,right=20mm,top=35mm,bottom=25mm]{geometry}
+\onehalfspacing %hier setze ich 1.5 Zeilenabstand fest 
+\usepackage{lscape} %Tabelle drehen
+\usepackage{longtable} %for vertical table
+\linespread{1.2}
+\usepackage{etoolbox}
+\usepackage[font={small}]{caption}
+\usepackage{courier} %computer language font 
+\setcounter{tocdepth}{2}
+\graphicspath{{figures/}}
+
+%\usepackage[acronym, toc]{glossaries} 
+\usepackage[nonumberlist,acronym, toc, nogroupskip]{glossaries-extra}
+\input{rest/glossary.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\parindent{0pt}
+
+% Bibliography_preamble
+%\usepackage[backend=biber,style=authoryear, autocite=inline]{biblatex}
+%\addbibresource{ref.bib}
+\usepackage[round]{natbib} %bibliography
+
+
+\begin{document}
+
+% Title
+\input{rest/title}
+%\maketitle
+%\thispagestyle{empty} 
+
+% Abstract
+%\begin{abstract}
+%\input{abstract}
+%\end{abstract}
+\begin{spacing}{1.5}
+% Table of Contents
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+
+% Abbreviations: here the page of the abbreviations is added, don't forget to use the \gls{abbreviation_name} in the text, in order to make the abbreviation show up here
+\newpage
+\printglossary[type=\acronymtype, title= List of Abbreviations, toctitle=List of Abbreviations]
+
+\newpage
+%List of Figures
+\addcontentsline{toc}{section}{List of Figures}
+%\section*{List of Figures}
+\listoffigures
+%List of Tables
+\addcontentsline{toc}{section}{List of Tables}
+%\section*{List of Tables}
+\listoftables
+
+
+
+
+% Introduction
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section{Explanation of the Overleaf project structure}  %2
+\input{1_intro/0_explanation}
+\bigskip
+
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section{Introduction}  %2
+\input{1_intro/intro}
+\bigskip
+
+
+\newpage
+\section{Literature Review on....} %3
+\input{2_literature_rev/2.0_intro.tex}
+\subsection{First subsection....}
+\input{2_literature_rev/2.1_subsection.tex}
+\subsection{Second Subsection...}
+\input{2_literature_rev/2.2_subsection.tex}
+%conclusion does not require own subtitle 
+\input{2_literature_rev/2.3_conclusion.tex}
+\newpage
+\end{spacing}
+\begin{spacing}{1}
+\input{list.tex} % This is the example table of the literature review
+\end{spacing}
+%\clearpage
+%\newpage
+
+
+\begin{spacing}{1.5}
+%\newgeometry{width=150mm,top=35mm,bottom=25mm, bindingoffset=6mm}
+\section{Methodology} 
+\input{3_methodology/3.0_intro.tex}
+%with the \input{3_methodology/file_name.tex} command you can add files from the subsections under the subsection title 
+\subsection{First Subsection - change title in main file}  
+\input{3_methodology/3.1_first_subsection.tex}
+\subsection{Second Subsection - change title in main file} 
+\input{3_methodology/3.2_second_subsection.tex}
+\subsection{Third Subsection - change title in main file} 
+\input{3_methodology/3.3_third_subsection.tex}
+%The conclusion does not require a subsection header as this is only a short summary of the chapter and introduction of what comes next
+\input{3_methodology/3.4_conclusion.tex}
+
+\bigskip
+
+
+
+\section{Results}
+\input{4_Results/4.0_intro}
+\subsection{First Subsection Tile}
+\input{4_Results/4.1_first_subsection.tex}
+\subsection{Second Subsection Title}
+\input{4_Results/4.2_second_subsection.tex}
+\subsection{Third Subsection Tile}
+\input{4_Results/4.3_third_subsection.tex}
+%does not require own title
+\input{4_Results/4.4_conclusion}
+\newpage
+\bigskip
+
+\section{Discussion}
+\input{5_Discussion/5.0_intro.tex}
+\subsection{First Subsection Title}
+\input{5_Discussion/5.1_first_subsection.tex}
+\subsection{Second Subsection Title}
+\input{5_Discussion/5.2_subsection.tex}
+%does not require separate title
+\input{5_Discussion/5.3_conclusion.tex}
+\newpage
+
+
+\section{Conclusion}
+\input{6_Conclusion/6.0_intro.tex}
+\input{6_Conclusion/6.1_main_results.tex}
+\input{6_Conclusion/6.2_outlook.tex}
+\subsection{Examples of Graphs, Tables, Equations and Pseudocode}
+\input{6_Conclusion/6.3_examples}
+
+
+% Bibliography
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{references/kbib}
+\bibliography{references/ref}
+
+% Declaration of Originality
+\newpage
+\thispagestyle{empty}
+\section*{Declaration of Originality:}
+\input{rest/declaration}
+
+\end{spacing}
+\end{document}
