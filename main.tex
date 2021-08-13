@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
 \usepackage[T1]{fontenc} %US-ASCII-Codierung für westeuropäische Sprachen
-\usepackage[a4paper,width=150mm,top=35mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage[a4paper,width=150mm,top=35mm,bottom=25mm,bindingoffset=6mm]{geometry} %here you define the geometry of the page 
 \usepackage[utf8]{inputenc} %choose utf8 encoding
 %\usepackage{lmodern}
 %\usepackage{times} %here we use times new roman
@@ -17,16 +17,16 @@
 \usepackage{transparent} %transparence in color
 %indent within algorithmic
 \usepackage[table, dvipsnames]{xcolor}
-\usepackage[autostyle]{csquotes} %Für Anführungszeichen
-\usepackage{enumitem} %für Listen in Latex
-\usepackage{graphicx} %für Graphiken
+\usepackage[autostyle]{csquotes} %for quotation marks
+\usepackage{enumitem} %for lists
+\usepackage{graphicx} %for graphics
 \usepackage{float}
 \usepackage{mathrsfs}
-\usepackage{amsmath} %Mathematische Formeln
+\usepackage{amsmath} %math formula
 \usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage{url} %für URLs
-\usepackage{breakurl} %damit URLs "gebrochen" werden können
+\usepackage{breakurl} %brake URLs into separate lines if tehy are too long
 \usepackage[breaklinks, hidelinks]{hyperref}
 %make hidelinks applicabale
 
@@ -56,6 +56,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setlength\parindent{0pt}
+
 
 % Bibliography_preamble
 %\usepackage[backend=biber,style=authoryear, autocite=inline]{biblatex}
@@ -116,18 +117,18 @@
 
 
 \newpage
-\section{Literature Review on....} %3
+\section{Literature Review on....- change title in main file} %3
 \input{2_literature_rev/2.0_intro.tex}
-\subsection{First subsection....}
+\subsection{First subsection....- change title in main file}
 \input{2_literature_rev/2.1_subsection.tex}
-\subsection{Second Subsection...}
+\subsection{Second Subsection...- change title in main file}
 \input{2_literature_rev/2.2_subsection.tex}
 %conclusion does not require own subtitle 
 \input{2_literature_rev/2.3_conclusion.tex}
 \newpage
 \end{spacing}
 \begin{spacing}{1}
-\input{list.tex} % This is the example table of the literature review
+%\input{long_table_example.tex} % This is the example table of the literature review
 \end{spacing}
 %\clearpage
 %\newpage
@@ -135,7 +136,7 @@
 
 \begin{spacing}{1.5}
 %\newgeometry{width=150mm,top=35mm,bottom=25mm, bindingoffset=6mm}
-\section{Methodology} 
+\section{Methodology - change title in main file} 
 \input{3_methodology/3.0_intro.tex}
 %with the \input{3_methodology/file_name.tex} command you can add files from the subsections under the subsection title 
 \subsection{First Subsection - change title in main file}  
@@ -151,13 +152,13 @@
 
 
 
-\section{Results}
+\section{Results - change title in main file}
 \input{4_Results/4.0_intro}
-\subsection{First Subsection Tile}
+\subsection{First Subsection Tile - change title in main file}
 \input{4_Results/4.1_first_subsection.tex}
-\subsection{Second Subsection Title}
+\subsection{Second Subsection Title - change title in main file}
 \input{4_Results/4.2_second_subsection.tex}
-\subsection{Third Subsection Tile}
+\subsection{Third Subsection Tile - change title in main file}
 \input{4_Results/4.3_third_subsection.tex}
 %does not require own title
 \input{4_Results/4.4_conclusion}
@@ -166,16 +167,16 @@
 
 \section{Discussion}
 \input{5_Discussion/5.0_intro.tex}
-\subsection{First Subsection Title}
+\subsection{First Subsection Title - change title in main file}
 \input{5_Discussion/5.1_first_subsection.tex}
-\subsection{Second Subsection Title}
+\subsection{Second Subsection Title - change title in main file}
 \input{5_Discussion/5.2_subsection.tex}
 %does not require separate title
 \input{5_Discussion/5.3_conclusion.tex}
 \newpage
 
 
-\section{Conclusion}
+\section{Conclusion - change title in main file}
 \input{6_Conclusion/6.0_intro.tex}
 \input{6_Conclusion/6.1_main_results.tex}
 \input{6_Conclusion/6.2_outlook.tex}

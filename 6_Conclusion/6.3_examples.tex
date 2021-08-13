@@ -1,7 +1,7 @@
  
 \subsubsection{Example how to add a figure and reference it in the text:}
 
-\colorbox{red}{\textbf{Independent of what your add to your thesis, graph, equation, table}}\\
+\colorbox{red}{\textbf{Independent of what your add to your thesis, graph, equation, table}}
 \colorbox{red}{\textbf{or pseudocode ALWAYS explain what is presented!}}
 \\
  
@@ -11,9 +11,9 @@ In the last step, the selected action from the reasoning part is executed causin
 \begin{figure}[H]
 	\centering
   \includegraphics[width=0.8\textwidth]{figures/reason_cycl.pdf}
-	\caption{Reasoning cycle of BDI agent (adapted from \cite{bremner2019})}
+	\caption{Reasoning cycle of \gls{bdi} agent (adapted from \cite{bremner2019})}
 	\label{reasoning}
-\end{figure}
+\end{figure} 
 
 
 \textbf{Second Example:}
@@ -85,6 +85,7 @@ These examples are presented in Table \ref{example_list}.
 \bottomrule
 \end{longtable}
 } 
+\newpage
 
 \textbf{Third Example with colored cells and explanation of the table:}
 
@@ -109,7 +110,7 @@ These examples are presented in Table \ref{example_list}.
 \end{longtable}
 }
 
-Table \ref{comparison} summarizes the comparison of EthIRL and EthLog with respect to the different theoretical requirements for explicit ethical agency. Here, it is visible that the EthLog architecture outperforms EthIRL in three requirements: ethical reasoning, transparency and responsibility where EthIRL is not superior to EthLog in any of the other requirements. Therefore, it can be concluded that the EthLog approach is preferable to the EthIRL approach. In this theoretical analysis, the main shortcomings of the EthIRL approach are possible data bias of expert demonstrations, temporal complex norms and lack of transparency making it difficult to apply the concept of shared responsibility. Some extensions can be made to the DQN and maximum entropy IRL approach to ensure a more accurate exploration of the state space $S$. Mechanisms for balancing decision-making with learning about the true underlying values can be fostered by extending the proposed architecture to the case of partially observable MDPs, e.g., by learning belief representations as stated in \cite{gangwani2019learning}. However, the missing concepts of transparency and responsibility are crucial to the evaluation if ethical agency can be ascribed to the EthIRL agent. This problem stays unresolved because no satisfying answer can be found that can be incorporated into the architecture. Even though the EthIRL agent competes well in some of the more technical categories, it has too many shortcomings and, thus, cannot be categorized as ethical agent. The main drawbacks of the EthLog approach are the hand-designed training data which are prone to bias and errors. This makes a full application of the concept of shared responsibility difficult. Another issue may occur when the cases taken for the training of the ethical reasoning module are fuzzy or noisy. This can be solved by combining ILP with function approximation techniques like NNs, as proposed in \cite{evans2018learning, payani2019inductive}. The issue of biased data is a general challenge in the machine learning domain and some techniques have been proposed to tackle this problem. This includes bias detection by determining the relative feature importance proposed by \cite{adebayo2016fairml}. However, a detailed description of such solutions is out of the scope of this thesis. \\
+Table \ref{comparison} summarizes the comparison of EthIRL and EthLog with respect to the different theoretical requirements for explicit ethical agency. Here, it is visible that the EthLog architecture outperforms EthIRL in three requirements: ethical reasoning, transparency and responsibility where EthIRL is not superior to EthLog in any of the other requirements. Therefore, it can be concluded that the EthLog approach is preferable to the EthIRL approach. In this theoretical analysis, the main shortcomings of the EthIRL approach are possible data bias of expert demonstrations, temporal complex norms and lack of transparency making it difficult to apply the concept of shared responsibility. Some extensions can be made to the \gls{dqn} and maximum entropy \gls{irl} approach to ensure a more accurate exploration of the state space $S$. Mechanisms for balancing decision-making with learning about the true underlying values can be fostered by extending the proposed architecture to the case of partially observable MDPs, e.g., by learning belief representations as stated in \cite{gangwani2020learning}. However, the missing concepts of transparency and responsibility are crucial to the evaluation if ethical agency can be ascribed to the EthIRL agent. This problem stays unresolved because no satisfying answer can be found that can be incorporated into the architecture. Even though the EthIRL agent competes well in some of the more technical categories, it has too many shortcomings and, thus, cannot be categorized as ethical agent. The main drawbacks of the EthLog approach are the hand-designed training data which are prone to bias and errors. This makes a full application of the concept of shared responsibility difficult. Another issue may occur when the cases taken for the training of the ethical reasoning module are fuzzy or noisy. This can be solved by combining \gls{ilp} with function approximation techniques like NNs, as proposed in \cite{evans2018learning, payani2019inductive}. The issue of biased data is a general challenge in the machine learning domain and some techniques have been proposed to tackle this problem. This includes bias detection by determining the relative feature importance proposed by \cite{pascanu2017}. However, a detailed description of such solutions is out of the scope of this thesis. \\
 
 
 \subsubsection{Examples of math equations:}
@@ -148,3 +149,6 @@ where the information gain $IG(D,a)$ from splitting the data set $D$ using the f
 \end{algorithm}
 
 Algorithm \ref{alg_id3} shows the pseudocode description from the ID3 algorithm adapted from \cite{kelleher2015fundamentals} and consists of two parts: in the first part (lines 1-6), the algorithm terminates the current path in the tree by adding a new node. Alternatively, in the second part (line 7-13), a node is initialized where the algorithm extends the current path by adding an interior node to the tree by growing the branches of this node as a result of repeatedly re-running the algorithm....
+
+
+
